@@ -73,7 +73,7 @@ public class TestMonitor {
         }
 
     }
-/*
+
     @DisplayName("MonitorExistence")
     @Test
     @Tag("Monitor")
@@ -167,7 +167,7 @@ public class TestMonitor {
         GetProcessExistence("MasterSCADA4DClient", false);
     }
 
-*/
+
     @DisplayName("DelProject")
     @Test
     @Tag("Monitor")
