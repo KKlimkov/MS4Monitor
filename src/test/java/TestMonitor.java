@@ -112,7 +112,10 @@ public class TestMonitor {
     @Tag("Monitor")
     @Order(3)
     public void LaunchOnlymplc() throws InterruptedException, IOException {
-        driver2.findElementByName("mplc").click();
+        WebElement element = driver2.findElement(By.name("mplc"));
+        //driver2.findElementByName("mplc").click();
+        //driver2.findElementByName("mplc").click();
+        element.click();
         Thread.sleep(500);
         driver2.findElementByName("Остановить процесс").click();
         Thread.sleep(5000);
