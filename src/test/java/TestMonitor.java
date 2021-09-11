@@ -105,6 +105,8 @@ public class TestMonitor {
         GetProcessExistence("mplc", true);
         GetProcessExistence("nginx", true);
         GetProcessExistence("node_ms4d", true);
+        driver2.findElementByAccessibilityId("ReopenAmongButtons").click();
+        Thread.sleep(1000);
     }
 
     @DisplayName("MPLCLaunch")
@@ -112,12 +114,10 @@ public class TestMonitor {
     @Tag("Monitor")
     @Order(3)
     public void LaunchOnlymplc() throws InterruptedException, IOException {
-        driver2.findElementByAccessibilityId("ReopenAmongButtons").click();
-        //WebElement element = driver2.findElement(By.name("mplc"));
+         //WebElement element = driver2.findElement(By.name("mplc"));
         //element.click();
         //driver2.findElementByName("mplc").click();
         driver2.findElementByName("mplc").click();
-
         Thread.sleep(500);
         driver2.findElementByName("Остановить процесс").click();
         Thread.sleep(5000);
@@ -165,7 +165,7 @@ public class TestMonitor {
     @Order(5)
     public void StartClient() throws InterruptedException, IOException {
         driver2.findElementByName("Запустить клиент").click();
-        Thread.sleep(5000);
+        Thread.sleep(7000);
         GetProcessExistence("MasterSCADA4DClient", true);
         driver2.findElementByName("Закрыть").click();
         Thread.sleep(1000);
