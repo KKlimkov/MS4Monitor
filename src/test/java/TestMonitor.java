@@ -187,8 +187,9 @@ public class TestMonitor {
         DelProject.click();
         Thread.sleep(3000);
         driver2.findElementByName("Удалить").click();
-        Thread.sleep(3000);
-        Boolean DelNotWork = driver2.findElementsByName("Удалить").size()>1;
+        Thread.sleep(5000);
+        Boolean DelNotWork = driver2.findElementsByName("Другие файлы").size()>1;
+        System.out.println(driver2.findElementsByName("Другие файлы").size());
         if (DelNotWork) {
             System.out.println(driver2.findElementsByName("Удалить").size());
             driver2.findElementByName(" Отмена ").click();
