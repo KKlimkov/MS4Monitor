@@ -100,7 +100,13 @@ public class MonitorSteps {
 
     @Step("Выбор проекта для импорта")
     public static void ChoiceImportProject() throws InterruptedException {
-        driver2.findElementByClassName("UIProperty").click();
+        /*driver2.findElementByClassName("UIProperty").click();
+        Thread.sleep(1000);
+        driver2.findElementByName("Открыть").click();
+        Thread.sleep(1000);*/
+        driver2.findElementByClassName("Edit").sendKeys("V");
+        Thread.sleep(1000);
+        driver2.findElementByAccessibilityId("ListViewSubItem-0").click();
         Thread.sleep(1000);
         driver2.findElementByName("Открыть").click();
         Thread.sleep(1000);
